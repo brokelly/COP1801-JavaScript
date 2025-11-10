@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fictional Dog Objects</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; background:#f7f7fb; padding:24px; }
+    h1 { color:#5b3c88; margin-bottom:8px; }
+    .sub { color:#666; margin-top:0; }
+    .wrap { display:grid; gap:16px; max-width:900px; }
+    .card {
+      background:#fff; border:1px solid #e5e5ee; border-radius:12px;
+      padding:16px; box-shadow:0 3px 8px rgba(0,0,0,.06);
+    }
+    .label { font-weight:bold; color:#4a4a66; }
+    .mono { white-space:pre-line; color:#222; }
+    .btns { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    button {
+      border:0; padding:10px 14px; border-radius:10px; cursor:pointer;
+      background:#5b3c88; color:#fff; font-weight:600;
+    }
+    button.secondary { background:#444; }
+    .error { color:#b00020; font-weight:700; }
+    ul.prop-list { margin: 8px 0 0 0; padding: 0 0 0 18px; }
+    .hint { color:#666; font-size:0.95rem; }
+    footer { margin-top:18px; color:#666; font-size:0.9rem; }
+    code { background:#f0eef7; padding:2px 6px; border-radius:6px; }
+  </style>
+</head>
+<body>
+
+  <h1>Fictional Dog Objects</h1>
+
+  <div class="wrap">
+    <section class="card">
+      <h3>Literal Object (<code>myDog</code>)</h3>
+      <pre id="literalOut" class="mono"></pre>
+    </section>
+
+    <section class="card">
+      <h3>Constructor Function(<code>myDogConst</code>)</h3>
+      <pre id="constructorOut" class="mono"></pre>
+    </section>
+
+    <section class="card">
+      <h3>Multiple Dogs (Built with the Constructor)</h3>
+      <div id="dogsListOut" class="mono"></div>
+    </section>
+
+    <section class="card">
+      <h3>Select a Dog</h3>
+      <p class="hint">Click “Choose Dog” and type one of the names exactly as shown above.</p>
+      <div class="btns">
+        <button id="btn-choose">Choose Dog</button>
+        <button id="btn-reset" class="secondary">Clear Selection</button>
+      </div>
+      <div id="selectionOut" class="mono" style="margin-top:10px;"></div>
+      <div id="errorOut" class="error" style="margin-top:8px;"></div>
+    </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
